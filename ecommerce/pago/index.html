@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasarela de pago (simulación) — VZGroups</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <p class="sim">
+    SIMULACIÓN — PANTALLA DE DEMOSTRACIÓN
+    <span>· No es una pasarela real · No se procesan pagos · No ingreses datos reales</span>
+  </p>
+
+  <header class="gw-top">
+    <div class="gw-top__in">
+      <div class="gw-brand">
+        <span class="gw-brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>
+        </span>
+        <span>
+          <b>Pasarela de pago</b>
+          <span>ENTORNO DE PRUEBA</span>
+        </span>
+      </div>
+      <span class="gw-secure">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        Conexión simulada
+      </span>
+    </div>
+  </header>
+
+  <main class="gw-main">
+    <div class="gw-wrap">
+
+      <!-- Estado: procesando -->
+      <div class="processing" data-processing role="status" aria-live="polite">
+        <div class="spinner" aria-hidden="true"></div>
+        <h2 data-proc-title>Procesando el pago…</h2>
+        <p data-proc-sub>No cierres ni recargues esta ventana.</p>
+      </div>
+
+      <div class="gw-grid" data-form-area>
+        <section class="panel">
+          <h1>Datos de la tarjeta</h1>
+          <p class="panel__sub">Completa el pago para confirmar tu pedido en VZGroups.</p>
+
+          <p class="notice">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l9 16H3l9-16z"/><path d="M12 10v4M12 17h.01"/></svg>
+            <span><strong>Los campos están bloqueados a propósito.</strong> Vienen con la tarjeta de prueba pública que usan los entornos de desarrollo en Chile, para que nadie pueda escribir datos reales. Esta pantalla no envía información a ninguna parte.</span>
+          </p>
+
+          <div class="tabs" role="group" aria-label="Tipo de tarjeta">
+            <button class="tab" type="button" aria-pressed="true" data-tab>Crédito</button>
+            <button class="tab" type="button" aria-pressed="false" data-tab>Débito</button>
+            <button class="tab" type="button" aria-pressed="false" data-tab>Prepago</button>
+          </div>
+
+          <form data-pay novalidate>
+            <div class="rows">
+              <div class="f">
+                <label for="num">Número de tarjeta</label>
+                <input id="num" type="text" value="4051 8856 0000 0008" readonly tabindex="-1"
+                       aria-describedby="num-h" autocomplete="off">
+                <small id="num-h" class="locked">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                  Tarjeta de prueba · campo bloqueado
+                </small>
+              </div>
+              <div class="rows rows--2">
+                <div class="f">
+                  <label for="exp">Vencimiento</label>
+                  <input id="exp" type="text" value="12 / 29" readonly tabindex="-1" autocomplete="off">
+                </div>
+                <div class="f">
+                  <label for="cvv">CVV</label>
+                  <input id="cvv" type="text" value="•••" readonly tabindex="-1" autocomplete="off">
+                </div>
+              </div>
+              <div class="f">
+                <label for="titular">Titular</label>
+                <input id="titular" type="text" value="USUARIO DE PRUEBA" readonly tabindex="-1" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="btn btn--pay" type="submit" data-submit>
+                Pagar <span data-btn-total>$0</span>
+              </button>
+              <a class="btn btn--ghost" href="../checkout/">Cancelar y volver al comercio</a>
+            </div>
+          </form>
+        </section>
+
+        <aside class="panel order" aria-label="Detalle de la transacción">
+          <h2>Detalle de la transacción</h2>
+
+          <div class="order__merchant">
+            <span class="m" aria-hidden="true">
+              <svg viewBox="0 0 100 125"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(0.72 0.175 48)"/></svg>
+            </span>
+            <span>
+              <b>VZGroups</b>
+              <span>Comercio · Talagante, RM</span>
+            </span>
+          </div>
+
+          <ul class="order__rows">
+            <li><span>Orden</span> <b data-orden>—</b></li>
+            <li><span>Productos</span> <b data-items>0</b></li>
+            <li><span>Subtotal</span> <b data-subtotal>$0</b></li>
+            <li><span>Despacho</span> <b data-envio>$0</b></li>
+          </ul>
+
+          <div class="order__total">
+            <span>Total a pagar</span>
+            <b data-total>$0</b>
+          </div>
+          <p class="order__iva">Incluye IVA <span data-iva>$0</span></p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="gw-foot">
+    Pantalla de demostración construida para la propuesta de rediseño de VZGroups.
+    En producción este paso lo resuelve un proveedor de pagos real (Webpay Plus de Transbank,
+    Flow o Mercado Pago), alojado en su propio dominio.
+    <a href="../">Volver al sitio</a>
+  </footer>
+
+  <script>
+    // Recuperamos el pedido armado en el checkout
+    var pedido = null;
+    try { pedido = JSON.parse(sessionStorage.getItem("vz-pedido")); } catch (e) {}
+
+    if (!pedido || !pedido.items || !pedido.items.length) {
+      location.replace("../carro/");
+    } else {
+      var clp = function (n) { return "$" + Math.round(n).toLocaleString("es-CL"); };
+      var nItems = pedido.items.reduce(function (a, i) { return a + i.qty; }, 0);
+
+      // Número de orden estable para toda la sesión
+      var orden = sessionStorage.getItem("vz-orden");
+      if (!orden) {
+        orden = "VZ-2026-" + String(Math.floor(Math.random() * 90000) + 10000);
+        sessionStorage.setItem("vz-orden", orden);
+      }
+
+      document.querySelector("[data-orden]").textContent = orden;
+      document.querySelector("[data-items]").textContent = nItems;
+      document.querySelector("[data-subtotal]").textContent = clp(pedido.subtotal);
+      document.querySelector("[data-envio]").textContent =
+        pedido.envio === 0 ? "Gratis" : clp(pedido.envio);
+      document.querySelector("[data-total]").textContent = clp(pedido.total);
+      document.querySelector("[data-iva]").textContent =
+        clp(Math.round(pedido.total - pedido.total / 1.19));
+      document.querySelector("[data-btn-total]").textContent = clp(pedido.total);
+
+      // Selector de tipo de tarjeta (cosmético)
+      var tabs = document.querySelectorAll("[data-tab]");
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          tabs.forEach(function (t) { t.setAttribute("aria-pressed", "false"); });
+          tab.setAttribute("aria-pressed", "true");
+        });
+      });
+
+      // "Pago": secuencia simulada y vuelta al comercio
+      document.querySelector("[data-pay]").addEventListener("submit", function (e) {
+        e.preventDefault();
+        document.querySelector("[data-submit]").disabled = true;
+
+        var proc = document.querySelector("[data-processing]");
+        var area = document.querySelector("[data-form-area]");
+        var titulo = document.querySelector("[data-proc-title]");
+        var sub = document.querySelector("[data-proc-sub]");
+
+        area.style.display = "none";
+        proc.classList.add("on");
+
+        var pasos = [
+          ["Validando la tarjeta…", "Simulación · no se contacta ningún banco."],
+          ["Autorizando la transacción…", "Simulación · no se mueve dinero."],
+          ["Confirmando con el comercio…", "Volviendo a VZGroups."]
+        ];
+        var i = 0;
+        (function siguiente() {
+          if (i < pasos.length) {
+            titulo.textContent = pasos[i][0];
+            sub.textContent = pasos[i][1];
+            i++;
+            setTimeout(siguiente, 1100);
+          } else {
+            pedido.orden = orden;
+            pedido.pagado = true;
+            try { sessionStorage.setItem("vz-pedido", JSON.stringify(pedido)); } catch (err) {}
+            location.href = "../comprobante/";
+          }
+        })();
+      });
+    }
+  </script>
+  <script src="../../shared/switcher.js" data-demo="c" defer></script>
+</body>
+</html>

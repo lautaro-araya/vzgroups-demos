@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido confirmado — VZGroups</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__logo" href="../">
+        <span class="nav__mark" aria-hidden="true">
+          <svg viewBox="0 0 100 125"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(0.72 0.175 48)"/></svg>
+        </span>
+        <span class="nav__word">VZ<b>Groups</b></span>
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav__links">
+          <li><a href="../#empresas">Nuestras empresas</a></li>
+          <li><a href="../#reservas">Reservas</a></li>
+          <li><a href="../tienda/">Tienda</a></li>
+          <li><a href="../#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="nav__cart" href="../carro/" aria-label="Ver el carro de compras (demo)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M3 3h2.4l2.2 12.4a1.5 1.5 0 0 0 1.5 1.2h7.9a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/></svg>
+        <span class="nav__cart-count" data-cart-count>0</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" data-nav-toggle>Menú</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <ol class="steps" style="max-width:660px;margin-inline:auto;">
+        <li data-done>Tu carro</li>
+        <li data-done>Datos y despacho</li>
+        <li data-done>Pago</li>
+        <li aria-current="step">Listo</li>
+      </ol>
+
+      <div class="receipt">
+        <p class="demo-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+          <span><strong>Comprobante de demostración.</strong> No corresponde a una compra real: no se cobró nada, no se despachará nada y no es un documento tributario. Existe solo para mostrar cómo se vería el cierre de la compra.</span>
+        </p>
+
+        <div class="receipt__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M4 12.5l5.5 5.5L20 7"/></svg>
+        </div>
+
+        <h1 data-titulo>¡Pedido confirmado!</h1>
+        <p class="receipt__lede" data-lede>Gracias por tu compra. Te enviamos el detalle por correo.</p>
+
+        <div class="receipt__card">
+          <div class="receipt__head">
+            <b data-orden>—</b>
+            <span data-fecha>—</span>
+          </div>
+          <div class="receipt__body">
+            <ul class="receipt__meta">
+              <li><span class="k">Cliente</span> <b data-nombre>—</b></li>
+              <li><span class="k">Correo</span> <b data-mail>—</b></li>
+              <li><span class="k">Entrega</span> <b data-entrega>—</b></li>
+              <li><span class="k">Dirección</span> <b data-direccion>—</b></li>
+              <li><span class="k">Pago</span> <b data-pago>—</b></li>
+              <li><span class="k">Estado</span> <b data-estado>—</b></li>
+            </ul>
+
+            <ul class="receipt__lines" data-lines></ul>
+
+            <ul class="summary__rows" style="margin-top:16px;">
+              <li><span>Subtotal</span> <b data-subtotal>$0</b></li>
+              <li><span>Despacho</span> <b data-envio>$0</b></li>
+            </ul>
+            <div class="summary__total">
+              <span>Total</span>
+              <b data-total>$0</b>
+            </div>
+            <p class="summary__iva">Incluye IVA <span data-iva>$0</span></p>
+          </div>
+        </div>
+
+        <div class="receipt__actions">
+          <button class="btn btn--ink" type="button" onclick="window.print()">Imprimir comprobante</button>
+          <a class="btn btn--line" href="../tienda/" data-reset>Volver a la tienda</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© 2026 VZGroups — Todos los derechos reservados</span>
+      <ul class="footer__links">
+        <li><a href="https://vetlain.cl" rel="noopener">Vetlain</a></li>
+        <li><a href="../#empresas">Vetclean</a></li>
+        <li><a href="../#empresas">VZModular</a></li>
+      </ul>
+      <span>Demo C — Tienda · Propuesta de rediseño</span>
+    </div>
+  </footer>
+
+  <script src="../cart.js"></script>
+  <script>
+    document.documentElement.classList.add("js");
+
+    (function () {
+      var nav = document.querySelector(".nav");
+      var btn = document.querySelector("[data-nav-toggle]");
+      btn.addEventListener("click", function () {
+        var open = nav.classList.toggle("nav--open");
+        btn.setAttribute("aria-expanded", open);
+        btn.textContent = open ? "Cerrar" : "Menú";
+      });
+    })();
+
+    var pedido = null;
+    try { pedido = JSON.parse(sessionStorage.getItem("vz-pedido")); } catch (e) {}
+
+    if (!pedido || !pedido.items || !pedido.items.length) {
+      location.replace("../carro/");
+    } else {
+      var clp = function (n) { return "$" + Math.round(n).toLocaleString("es-CL"); };
+
+      var orden = pedido.orden || sessionStorage.getItem("vz-orden");
+      if (!orden) {
+        orden = "VZ-2026-" + String(Math.floor(Math.random() * 90000) + 10000);
+        sessionStorage.setItem("vz-orden", orden);
+      }
+
+      var porTransferencia = pedido.metodo === "transferencia";
+
+      if (porTransferencia) {
+        document.querySelector("[data-titulo]").textContent = "¡Pedido registrado!";
+        document.querySelector("[data-lede]").textContent =
+          "Te enviamos los datos de transferencia por correo. Preparamos el despacho apenas confirmemos el pago.";
+      }
+
+      document.querySelector("[data-orden]").textContent = "Orden " + orden;
+      document.querySelector("[data-fecha]").textContent =
+        new Date().toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" });
+      document.querySelector("[data-nombre]").textContent = pedido.nombre || "—";
+      document.querySelector("[data-mail]").textContent = pedido.mail || "—";
+      document.querySelector("[data-entrega]").textContent = pedido.entrega || "—";
+      document.querySelector("[data-direccion]").textContent = pedido.direccion || "—";
+      document.querySelector("[data-pago]").textContent =
+        porTransferencia ? "Transferencia bancaria" : "Tarjeta · terminada en 0008 (prueba)";
+      document.querySelector("[data-estado]").textContent =
+        porTransferencia ? "Esperando transferencia" : "Pagado (simulado)";
+
+      var ul = document.querySelector("[data-lines]");
+      pedido.items.forEach(function (i) {
+        var li = document.createElement("li");
+        li.innerHTML =
+          "<span>" + i.nombre + "<br><span class='q'>" + i.qty + " × " + clp(i.precio) + "</span></span>" +
+          "<b>" + clp(i.precio * i.qty) + "</b>";
+        ul.appendChild(li);
+      });
+
+      document.querySelector("[data-subtotal]").textContent = clp(pedido.subtotal);
+      var elEnvio = document.querySelector("[data-envio]");
+      elEnvio.textContent = pedido.envio === 0 ? "Gratis" : clp(pedido.envio);
+      elEnvio.classList.toggle("free", pedido.envio === 0);
+      document.querySelector("[data-total]").textContent = clp(pedido.total);
+      document.querySelector("[data-iva]").textContent =
+        clp(Math.round(pedido.total - pedido.total / 1.19));
+
+      // La compra terminó: vaciamos el carro para que la demo se pueda repetir limpia
+      VZCart.clear();
+      sessionStorage.removeItem("vz-orden");
+
+      document.querySelector("[data-reset]").addEventListener("click", function () {
+        sessionStorage.removeItem("vz-pedido");
+      });
+    }
+  </script>
+  <script src="../../shared/switcher.js" data-demo="c" defer></script>
+</body>
+</html>

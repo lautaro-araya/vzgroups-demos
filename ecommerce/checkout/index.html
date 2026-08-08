@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos y despacho — VZGroups</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__logo" href="../">
+        <span class="nav__mark" aria-hidden="true">
+          <svg viewBox="0 0 100 125"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(0.72 0.175 48)"/></svg>
+        </span>
+        <span class="nav__word">VZ<b>Groups</b></span>
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav__links">
+          <li><a href="../#empresas">Nuestras empresas</a></li>
+          <li><a href="../#reservas">Reservas</a></li>
+          <li><a href="../tienda/">Tienda</a></li>
+          <li><a href="../#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="nav__cart" href="../carro/" aria-label="Ver el carro de compras (demo)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M3 3h2.4l2.2 12.4a1.5 1.5 0 0 0 1.5 1.2h7.9a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/></svg>
+        <span class="nav__cart-count" data-cart-count>0</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" data-nav-toggle>Menú</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Migas de pan">
+        <a href="../">Inicio</a> <span aria-hidden="true">›</span>
+        <a href="../carro/">Carro</a> <span aria-hidden="true">›</span>
+        <span aria-current="page">Datos y despacho</span>
+      </nav>
+
+      <ol class="steps">
+        <li data-done>Tu carro</li>
+        <li aria-current="step">Datos y despacho</li>
+        <li>Pago</li>
+        <li>Listo</li>
+      </ol>
+
+      <div data-cart-empty-show hidden>
+        <div class="empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M3 3h2.4l2.2 12.4a1.5 1.5 0 0 0 1.5 1.2h7.9a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/></svg>
+          <h3>No hay nada que pagar</h3>
+          <p>Tu carro está vacío, así que no hay pedido que completar.</p>
+          <a class="btn btn--orange" href="../tienda/">Ir a la tienda</a>
+        </div>
+      </div>
+
+      <div data-cart-empty-hide hidden>
+        <h1 style="font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:22px;">Datos y despacho</h1>
+
+        <p class="demo-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+          <span><strong>Esto es una demostración.</strong> Nada de lo que escribas se envía ni se guarda: el formulario solo existe para mostrarle al cliente cómo se vería el flujo de compra. No ingreses datos reales.</span>
+        </p>
+
+        <form class="checkout-grid" data-checkout novalidate>
+          <div>
+            <fieldset class="fieldset">
+              <legend>Tus datos</legend>
+              <div class="form-rows form-rows--2">
+                <div class="field">
+                  <label for="nombre">Nombre y apellido</label>
+                  <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="rut">RUT</label>
+                  <input id="rut" name="rut" type="text" placeholder="12.345.678-9">
+                </div>
+              </div>
+              <div class="form-rows form-rows--2" style="margin-top:15px;">
+                <div class="field">
+                  <label for="mail">Correo electrónico</label>
+                  <input id="mail" name="mail" type="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                  <label for="fono">Teléfono</label>
+                  <input id="fono" name="fono" type="tel" autocomplete="tel" placeholder="+56 9 ...">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend>Entrega</legend>
+              <div class="pays" style="margin-bottom:16px;">
+                <label class="pay">
+                  <input type="radio" name="entrega" value="despacho" checked>
+                  <span>
+                    <strong>Despacho a domicilio</strong>
+                    <span>1 a 3 días hábiles en zona de cobertura</span>
+                  </span>
+                  <span class="pay__logo" data-envio-label>$4.990</span>
+                </label>
+                <label class="pay">
+                  <input type="radio" name="entrega" value="retiro">
+                  <span>
+                    <strong>Retiro en tienda</strong>
+                    <span>Juana Canales 987, Talagante · Lun a Vie 09:00–17:00</span>
+                  </span>
+                  <span class="pay__logo">Gratis</span>
+                </label>
+              </div>
+
+              <div data-dir>
+                <div class="form-rows form-rows--2">
+                  <div class="field">
+                    <label for="dir">Dirección</label>
+                    <input id="dir" name="dir" type="text" autocomplete="street-address">
+                  </div>
+                  <div class="field">
+                    <label for="comuna">Comuna</label>
+                    <select id="comuna" name="comuna">
+                      <option>Talagante</option>
+                      <option>Peñaflor</option>
+                      <option>El Monte</option>
+                      <option>Isla de Maipo</option>
+                      <option>Padre Hurtado</option>
+                      <option>Calera de Tango</option>
+                      <option>Maipú</option>
+                      <option>Buin</option>
+                      <option>Paine</option>
+                      <option>Melipilla</option>
+                      <option>Curacaví</option>
+                      <option>Santiago centro</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field" style="margin-top:15px;">
+                  <label for="obs">Indicaciones para la entrega <small>(opcional)</small></label>
+                  <input id="obs" name="obs" type="text" placeholder="Ej: bodega al fondo, preguntar por Andrea">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend>Forma de pago</legend>
+              <div class="pays">
+                <label class="pay">
+                  <input type="radio" name="pago" value="tarjeta" checked>
+                  <span>
+                    <strong>Tarjeta de crédito o débito</strong>
+                    <span>Te llevamos a la pasarela de pago para completar la transacción</span>
+                  </span>
+                  <span class="pay__logo">Pasarela</span>
+                </label>
+                <label class="pay">
+                  <input type="radio" name="pago" value="transferencia">
+                  <span>
+                    <strong>Transferencia bancaria</strong>
+                    <span>Te enviamos los datos por correo y despachamos al confirmar</span>
+                  </span>
+                  <span class="pay__logo">Transferencia</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <aside class="summary" aria-label="Resumen del pedido">
+            <h2>Tu pedido</h2>
+            <ul class="summary__rows" data-mini style="margin-bottom:16px;"></ul>
+            <ul class="summary__rows">
+              <li><span>Subtotal</span> <b data-sum-subtotal>$0</b></li>
+              <li><span>Despacho</span> <b data-sum-envio>$0</b></li>
+            </ul>
+            <div class="summary__total">
+              <span>Total</span>
+              <b data-sum-total>$0</b>
+            </div>
+            <p class="summary__iva">Incluye IVA <span data-sum-iva>$0</span></p>
+            <button class="btn btn--orange btn--block" type="submit">Ir a pagar</button>
+            <p class="summary__note"><a href="../carro/" style="color:var(--orange-deep);font-weight:800;">← Volver al carro</a></p>
+          </aside>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© 2026 VZGroups — Todos los derechos reservados</span>
+      <ul class="footer__links">
+        <li><a href="https://vetlain.cl" rel="noopener">Vetlain</a></li>
+        <li><a href="../#empresas">Vetclean</a></li>
+        <li><a href="../#empresas">VZModular</a></li>
+      </ul>
+      <span>Demo C — Tienda · Propuesta de rediseño</span>
+    </div>
+  </footer>
+
+  <script src="../cart.js"></script>
+  <script>
+    document.documentElement.classList.add("js");
+
+    (function () {
+      var nav = document.querySelector(".nav");
+      var btn = document.querySelector("[data-nav-toggle]");
+      btn.addEventListener("click", function () {
+        var open = nav.classList.toggle("nav--open");
+        btn.setAttribute("aria-expanded", open);
+        btn.textContent = open ? "Cerrar" : "Menú";
+      });
+    })();
+
+    var retiro = false;
+
+    function envio() { return retiro ? 0 : VZCart.despacho(); }
+    function total() { return VZCart.subtotal() + envio(); }
+
+    function pintar() {
+      var mini = document.querySelector("[data-mini]");
+      mini.innerHTML = "";
+      VZCart.read().forEach(function (i) {
+        var li = document.createElement("li");
+        li.innerHTML = "<span>" + i.qty + " × " + i.nombre + "</span> <b>" +
+                       VZCart.clp(i.precio * i.qty) + "</b>";
+        mini.appendChild(li);
+      });
+
+      document.querySelector("[data-sum-subtotal]").textContent = VZCart.clp(VZCart.subtotal());
+      var e = envio();
+      var el = document.querySelector("[data-sum-envio]");
+      el.textContent = e === 0 ? "Gratis" : VZCart.clp(e);
+      el.classList.toggle("free", e === 0);
+      document.querySelector("[data-sum-total]").textContent = VZCart.clp(total());
+      document.querySelector("[data-sum-iva]").textContent =
+        VZCart.clp(Math.round(total() - total() / 1.19));
+
+      var lbl = document.querySelector("[data-envio-label]");
+      lbl.textContent = VZCart.despacho() === 0 ? "Gratis" : VZCart.clp(VZCart.despacho());
+    }
+
+    // Entrega: mostrar u ocultar la dirección
+    document.querySelectorAll('input[name="entrega"]').forEach(function (r) {
+      r.addEventListener("change", function () {
+        retiro = r.value === "retiro" && r.checked;
+        document.querySelector("[data-dir]").hidden = retiro;
+        pintar();
+      });
+    });
+
+    // Continuar al pago
+    document.querySelector("[data-checkout]").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = e.target;
+      if (!f.nombre.value.trim() || !f.mail.value.trim()) {
+        alert("Completa al menos tu nombre y correo para continuar con la demo.");
+        return;
+      }
+      var metodo = f.querySelector('input[name="pago"]:checked').value;
+      var pedido = {
+        nombre: f.nombre.value.trim(),
+        mail: f.mail.value.trim(),
+        fono: f.fono.value.trim(),
+        entrega: retiro ? "Retiro en tienda" : "Despacho a domicilio",
+        direccion: retiro ? "Juana Canales 987, Talagante"
+                          : (f.dir.value.trim() + ", " + f.comuna.value),
+        metodo: metodo,
+        envio: envio(),
+        items: VZCart.read(),
+        subtotal: VZCart.subtotal(),
+        total: total()
+      };
+      try { sessionStorage.setItem("vz-pedido", JSON.stringify(pedido)); } catch (err) {}
+      location.href = metodo === "tarjeta" ? "../pago/" : "../comprobante/";
+    });
+
+    pintar();
+  </script>
+  <script src="../../shared/switcher.js" data-demo="c" defer></script>
+</body>
+</html>

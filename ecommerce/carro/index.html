@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu carro — VZGroups</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__logo" href="../">
+        <span class="nav__mark" aria-hidden="true">
+          <svg viewBox="0 0 100 125"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(0.72 0.175 48)"/></svg>
+        </span>
+        <span class="nav__word">VZ<b>Groups</b></span>
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav__links">
+          <li><a href="../#empresas">Nuestras empresas</a></li>
+          <li><a href="../#reservas">Reservas</a></li>
+          <li><a href="../tienda/">Tienda</a></li>
+          <li><a href="../#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="nav__cart" href="./" aria-label="Carro de compras (demo)" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M3 3h2.4l2.2 12.4a1.5 1.5 0 0 0 1.5 1.2h7.9a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/></svg>
+        <span class="nav__cart-count" data-cart-count>0</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" data-nav-toggle>Menú</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Migas de pan">
+        <a href="../">Inicio</a> <span aria-hidden="true">›</span>
+        <a href="../tienda/">Tienda</a> <span aria-hidden="true">›</span>
+        <span aria-current="page">Carro</span>
+      </nav>
+
+      <ol class="steps">
+        <li aria-current="step">Tu carro</li>
+        <li>Datos y despacho</li>
+        <li>Pago</li>
+        <li>Listo</li>
+      </ol>
+
+      <!-- Carro vacío -->
+      <div data-cart-empty-show hidden>
+        <div class="empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M3 3h2.4l2.2 12.4a1.5 1.5 0 0 0 1.5 1.2h7.9a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/></svg>
+          <h3>Tu carro está vacío</h3>
+          <p>Todavía no agregaste productos del catálogo.</p>
+          <a class="btn btn--orange" href="../tienda/">Ir a la tienda</a>
+        </div>
+      </div>
+
+      <!-- Carro con productos -->
+      <div data-cart-empty-hide hidden>
+        <div class="checkout-grid">
+          <div>
+            <h1 style="font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:22px;">Tu carro</h1>
+            <ul class="lines" data-lines></ul>
+            <p style="margin-top:22px;">
+              <a class="btn btn--line btn--small" href="../tienda/">← Seguir comprando</a>
+            </p>
+          </div>
+
+          <aside class="summary" aria-label="Resumen del pedido">
+            <h2>Resumen</h2>
+            <div class="freeship" data-freeship hidden>
+              <div class="freeship__bar"><div class="freeship__fill" data-freeship-fill></div></div>
+              <p data-freeship-text></p>
+            </div>
+            <ul class="summary__rows">
+              <li><span>Subtotal</span> <b data-sum-subtotal>$0</b></li>
+              <li><span>Despacho</span> <b data-sum-envio>$0</b></li>
+            </ul>
+            <div class="summary__total">
+              <span>Total</span>
+              <b data-sum-total>$0</b>
+            </div>
+            <p class="summary__iva">Incluye IVA <span data-sum-iva>$0</span></p>
+            <a class="btn btn--orange btn--block" href="../checkout/">Continuar al despacho</a>
+            <p class="summary__note">Despacho en zona de cobertura (Talagante y alrededores). Para otras comunas y compras por volumen, cotiza con el equipo.</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© 2026 VZGroups — Todos los derechos reservados</span>
+      <ul class="footer__links">
+        <li><a href="https://vetlain.cl" rel="noopener">Vetlain</a></li>
+        <li><a href="../#empresas">Vetclean</a></li>
+        <li><a href="../#empresas">VZModular</a></li>
+      </ul>
+      <span>Demo C — Tienda · Propuesta de rediseño</span>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status"></div>
+
+  <script src="../cart.js"></script>
+  <script>
+    document.documentElement.classList.add("js");
+
+    (function () {
+      var nav = document.querySelector(".nav");
+      var btn = document.querySelector("[data-nav-toggle]");
+      btn.addEventListener("click", function () {
+        var open = nav.classList.toggle("nav--open");
+        btn.setAttribute("aria-expanded", open);
+        btn.textContent = open ? "Cerrar" : "Menú";
+      });
+    })();
+
+    // Íconos por categoría para las líneas del carro
+    var ICON = {
+      plagas:   '<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="18" y="12" width="44" height="56" rx="5"/><circle cx="40" cy="34" r="9"/><path d="M28 56h24"/></svg>',
+      limpieza: '<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M34 12h12M36 12v10L22 56a6 6 0 0 0 5.6 8h24.8A6 6 0 0 0 58 56L44 22V12"/><path d="M28 46h24"/></svg>',
+      epp:      '<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M30 68V36a4 4 0 0 1-6-4V20a4 4 0 0 1 4-4h2v-4h20v4h2a4 4 0 0 1 4 4v12a4 4 0 0 1-6 4v32H30z"/></svg>'
+    };
+    function catKey(cat) {
+      var c = (cat || "").toLowerCase();
+      if (c.indexOf("limpieza") > -1) return "limpieza";
+      if (c.indexOf("epp") > -1 || c.indexOf("higiene") > -1) return "epp";
+      return "plagas";
+    }
+
+    function render() {
+      var items = VZCart.read();
+      var ul = document.querySelector("[data-lines]");
+      ul.innerHTML = "";
+
+      items.forEach(function (i) {
+        var k = catKey(i.cat);
+        var li = document.createElement("li");
+        li.className = "line";
+        li.innerHTML =
+          '<span class="line__media" data-cat="' + k + '" aria-hidden="true">' + ICON[k] + '</span>' +
+          '<div>' +
+            '<span class="line__cat">' + i.cat + '</span>' +
+            '<h3 class="line__name">' + i.nombre + '</h3>' +
+            '<span class="line__unit">' + (i.unidad ? i.unidad + " · " : "") + VZCart.clp(i.precio) + ' c/u</span>' +
+          '</div>' +
+          '<span class="qty">' +
+            '<button type="button" data-minus aria-label="Quitar una unidad de ' + i.nombre + '">−</button>' +
+            '<output aria-label="Cantidad">' + i.qty + '</output>' +
+            '<button type="button" data-plus aria-label="Agregar una unidad de ' + i.nombre + '">+</button>' +
+          '</span>' +
+          '<div class="line__right">' +
+            '<span class="line__price">' + VZCart.clp(i.precio * i.qty) + '</span>' +
+            '<button type="button" class="line__drop" data-drop>Quitar</button>' +
+          '</div>';
+
+        li.querySelector("[data-minus]").addEventListener("click", function () {
+          if (i.qty <= 1) { VZCart.remove(i.sku); } else { VZCart.setQty(i.sku, i.qty - 1); }
+          render();
+        });
+        li.querySelector("[data-plus]").addEventListener("click", function () {
+          VZCart.setQty(i.sku, i.qty + 1); render();
+        });
+        li.querySelector("[data-drop]").addEventListener("click", function () {
+          VZCart.remove(i.sku); render();
+        });
+
+        ul.appendChild(li);
+      });
+
+      // Totales
+      document.querySelector("[data-sum-subtotal]").textContent = VZCart.clp(VZCart.subtotal());
+      var envio = VZCart.despacho();
+      var elEnvio = document.querySelector("[data-sum-envio]");
+      elEnvio.textContent = envio === 0 ? "Gratis" : VZCart.clp(envio);
+      elEnvio.classList.toggle("free", envio === 0);
+      document.querySelector("[data-sum-total]").textContent = VZCart.clp(VZCart.total());
+      document.querySelector("[data-sum-iva]").textContent = VZCart.clp(VZCart.ivaIncluido());
+
+      // Progreso hacia el despacho gratis
+      var falta = VZCart.DESPACHO_GRATIS_DESDE - VZCart.subtotal();
+      var fs = document.querySelector("[data-freeship]");
+      fs.hidden = VZCart.subtotal() === 0;
+      var pct = Math.min(100, (VZCart.subtotal() / VZCart.DESPACHO_GRATIS_DESDE) * 100);
+      document.querySelector("[data-freeship-fill]").style.width = pct + "%";
+      document.querySelector("[data-freeship-text]").innerHTML = falta > 0
+        ? "Te faltan <b>" + VZCart.clp(falta) + "</b> para el despacho gratis."
+        : "¡Listo! Tu pedido tiene <b>despacho gratis</b>.";
+    }
+
+    render();
+  </script>
+  <script src="../../shared/switcher.js" data-demo="c" defer></script>
+</body>
+</html>

@@ -29,10 +29,10 @@
           <li><a href="../#contacto">Contacto</a></li>
         </ul>
       </nav>
-      <button class="nav__cart" aria-label="Carro de compras (demo)" data-cart>
+      <a class="nav__cart" href="../carro/" aria-label="Ver el carro de compras (demo)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M3 3h2.4l2.2 12.4a1.5 1.5 0 0 0 1.5 1.2h7.9a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/></svg>
         <span class="nav__cart-count" data-cart-count>0</span>
-      </button>
+      </a>
       <button class="nav__toggle" aria-expanded="false" data-nav-toggle>Menú</button>
     </div>
   </header>
@@ -54,7 +54,8 @@
         </div>
 
         <ul class="grid reveal" data-products>
-          <li class="card" data-cat="plagas">
+          <li class="card" data-cat="plagas" data-sku="VL-EKO" data-name="Ekomille — captura ecológica"
+                data-price="685000" data-cat-label="Control de roedores" data-unit="Equipo">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">VL-EKO</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="18" y="12" width="44" height="56" rx="5"/><circle cx="40" cy="34" r="9"/><path d="M40 30v4l3 3M28 56h24"/></svg>
@@ -66,7 +67,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="plagas">
+          <li class="card" data-cat="plagas" data-sku="VL-RB40" data-name="RB40 — lámpara UV de captura"
+                data-price="265000" data-cat-label="Control de insectos">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">VL-RB40</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 26h52l-6 34H20l-6-34z"/><path d="M22 26v-6a8 8 0 0 1 8-8h20a8 8 0 0 1 8 8v6"/><path d="M26 38h28M28 48h24"/></svg>
@@ -78,7 +80,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="plagas">
+          <li class="card" data-cat="plagas" data-sku="VL-PAL" data-name="Trampa de paloma"
+                data-price="58000" data-cat-label="Control de aves">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">VL-PAL</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="14" y="30" width="52" height="34" rx="4"/><path d="M14 44h52M30 30v34M50 30v34M40 12v10M34 20l6 4 6-4"/></svg>
@@ -90,7 +93,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="plagas">
+          <li class="card" data-cat="plagas" data-sku="VL-SNAP" data-name="Rat Snap — trampa de golpe"
+                data-price="2800" data-cat-label="Control de roedores" data-unit="Unidad">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">VL-SNAP</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="12" y="26" width="56" height="28" rx="4"/><path d="M24 26v-8M24 18l14 8M52 40h8M20 40h8"/><circle cx="40" cy="40" r="5"/></svg>
@@ -102,7 +106,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="plagas">
+          <li class="card" data-cat="plagas" data-sku="VL-EVO" data-name="Caja Evo — estación cebadera"
+                data-price="5100" data-cat-label="Control de roedores" data-unit="Unidad">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">VL-EVO</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 34l26-16 26 16v20a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6V34z"/><circle cx="40" cy="42" r="6"/><path d="M28 60h24"/></svg>
@@ -114,7 +119,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="limpieza">
+          <li class="card" data-cat="limpieza" data-sku="VC-AMC5" data-name="Amonio Cuaternario Vetclean 5 L"
+                data-price="8990" data-cat-label="Limpieza" data-unit="Bidón 5 L">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">VC-AMC5</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M34 12h12M36 12v10L22 56a6 6 0 0 0 5.6 8h24.8A6 6 0 0 0 58 56L44 22V12"/><path d="M28 46h24"/></svg>
@@ -126,7 +132,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="limpieza">
+          <li class="card" data-cat="limpieza" data-sku="VC-CLG5" data-name="Cloro Gel 5 L"
+                data-price="6000" data-cat-label="Limpieza" data-unit="Bidón 5 L">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">VC-CLG5</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M30 12h20v12l6 8v30a6 6 0 0 1-6 6H30a6 6 0 0 1-6-6V32l6-8V12z"/><path d="M24 44h32"/></svg>
@@ -138,7 +145,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="limpieza">
+          <li class="card" data-cat="limpieza" data-sku="VC-LVE5" data-name="Lavalozas Eco 5 L"
+                data-price="5500" data-cat-label="Limpieza" data-unit="Bidón 5 L">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">VC-LVE5</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="40" cy="46" r="20"/><path d="M40 26c0-6 4-10 4-14M28 60a20 20 0 0 0 24 0"/><circle cx="34" cy="44" r="3"/><circle cx="46" cy="50" r="2"/></svg>
@@ -150,7 +158,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="limpieza">
+          <li class="card" data-cat="limpieza" data-sku="VC-LPS5" data-name="Limpia pisos 5 L"
+                data-price="6500" data-cat-label="Limpieza" data-unit="Bidón 5 L">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">VC-LPS5</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M46 12l-8 20M30 32h24l-4 34H34l-4-34z"/><path d="M32 44h20"/></svg>
@@ -162,7 +171,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="epp">
+          <li class="card" data-cat="epp" data-sku="EP-NIT100" data-name="Guantes de nitrilo · caja x100"
+                data-price="5100" data-cat-label="EPP y desechables" data-unit="Caja x100">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">EP-NIT100</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M30 68V36a4 4 0 0 1-6-4V20a4 4 0 0 1 4-4h2v-4h20v4h2a4 4 0 0 1 4 4v12a4 4 0 0 1-6 4v32H30z"/><path d="M30 44h20"/></svg>
@@ -174,7 +184,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="epp">
+          <li class="card" data-cat="epp" data-sku="EP-MSC50" data-name="Mascarilla desechable · caja x50"
+                data-price="2600" data-cat-label="EPP y desechables" data-unit="Caja x50">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">EP-MSC50</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 34c0-6 11-12 24-12s24 6 24 12v10c0 6-11 14-24 14S16 50 16 44V34z"/><path d="M16 36l-6-4M64 36l6-4M26 36h28M28 44h24"/></svg>
@@ -186,7 +197,8 @@
               <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
             </div>
           </li>
-          <li class="card" data-cat="epp">
+          <li class="card" data-cat="epp" data-sku="EP-PHI" data-name="Papel higiénico industrial"
+                data-price="18500" data-cat-label="Higiene" data-unit="Pack">
             <div class="card__media" aria-hidden="true">
               <span class="card__sku">EP-PHI</span>
               <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="40" cy="34" r="20"/><circle cx="40" cy="34" r="7"/><path d="M40 54v14"/></svg>
@@ -284,26 +296,8 @@
       });
     })();
 
-    // Carro demo persistente entre home y tienda + toast
-    (function () {
-      var KEY = "vz-cart-demo";
-      var count = parseInt(sessionStorage.getItem(KEY), 10) || 0;
-      var badge = document.querySelector("[data-cart-count]");
-      var toast = document.querySelector("[data-toast]");
-      var t;
-      badge.textContent = count;
-      document.querySelectorAll("[data-add]").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          count++;
-          badge.textContent = count;
-          sessionStorage.setItem(KEY, count);
-          toast.classList.add("show");
-          clearTimeout(t);
-          t = setTimeout(function () { toast.classList.remove("show"); }, 1800);
-        });
-      });
-    })();
   </script>
+  <script src="../cart.js"></script>
   <script src="../../shared/switcher.js" data-demo="c" defer></script>
 </body>
 </html>
