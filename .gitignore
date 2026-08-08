@@ -1,0 +1,13 @@
+# Documentos internos — NO publicar.
+# El informe critica el sitio actual del cliente y PRODUCT.md contiene
+# la estrategia y anti-referencias. Se comparten a mano, no por el repo.
+informe-diagnostico-vzgroups.txt
+PRODUCT.md
+
+# Configuración local de herramientas
+.claude/
+
+# Basura de sistema
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VZGroups — Nuestras empresas, tienda y reservas en línea</title>
+  <meta name="description" content="VZGroups: Vetlain (control de plagas), Vetclean (aseo e higiene) y VZModular (capacitación). Tienda de insumos con despacho en Talagante y alrededores. Agenda tu evaluación gratis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="inicio">
+    <div class="wrap nav__inner">
+      <a class="nav__logo" href="#inicio">
+        <span class="nav__mark" aria-hidden="true">
+          <svg viewBox="0 0 100 125"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(0.72 0.175 48)"/></svg>
+        </span>
+        <span class="nav__word">VZ<b>Groups</b></span>
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav__links">
+          <li><a href="#empresas">Nuestras empresas</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+          <li><a href="tienda/">Tienda</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="nav__cart" aria-label="Carro de compras (demo)" data-cart>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M3 3h2.4l2.2 12.4a1.5 1.5 0 0 0 1.5 1.2h7.9a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/></svg>
+        <span class="nav__cart-count" data-cart-count>0</span>
+      </button>
+      <button class="nav__toggle" aria-expanded="false" data-nav-toggle>Menú</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div>
+          <h1>Plagas fuera. Todo <span class="mark">limpio</span>. Equipo capacitado.</h1>
+          <p class="hero__lede">El grupo de Talagante que reúne a Vetlain, Vetclean y VZModular. Servicio en terreno, insumos con despacho propio y formación profesional: 20 años de oficio y certificación ISO 9001.</p>
+          <div class="hero__actions">
+            <a class="btn btn--orange" href="#reservas">Agendar evaluación gratis</a>
+            <a class="btn btn--line" href="tienda/">Ver la tienda</a>
+          </div>
+        </div>
+        <figure class="hero__media">
+          <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1200&q=80"
+               alt="Bodega con pallets y cajas apiladas bajo luz cenital, el tipo de recinto que VZGroups mantiene y abastece"
+               fetchpriority="high">
+          <figcaption class="hero__sticker">
+            <strong>Mismo día</strong>
+            <span>Respuesta en Talagante y comunas vecinas</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="ticker" aria-label="Nuestras garantías">
+        <div class="ticker__track">
+          <div class="ticker__group">
+            <span>ISO 9001 certificada</span><span aria-hidden="true"><i>●</i></span>
+            <span>+20 años de oficio</span><span aria-hidden="true"><i>●</i></span>
+            <span>Visita de evaluación sin costo</span><span aria-hidden="true"><i>●</i></span>
+            <span>Despacho propio en zona</span><span aria-hidden="true"><i>●</i></span>
+            <span>Factura electrónica</span><span aria-hidden="true"><i>●</i></span>
+            <span>Reservas sin crear cuenta</span><span aria-hidden="true"><i>●</i></span>
+          </div>
+          <div class="ticker__group" aria-hidden="true">
+            <span>ISO 9001 certificada</span><span><i>●</i></span>
+            <span>+20 años de oficio</span><span><i>●</i></span>
+            <span>Visita de evaluación sin costo</span><span><i>●</i></span>
+            <span>Despacho propio en zona</span><span><i>●</i></span>
+            <span>Factura electrónica</span><span><i>●</i></span>
+            <span>Reservas sin crear cuenta</span><span><i>●</i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NUESTRAS EMPRESAS ============ -->
+    <section class="section" id="empresas">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2>Nuestras empresas</h2>
+          <p>Tres marcas, una misma familia. Elige la que necesitas: el respaldo es siempre de VZGroups.</p>
+        </div>
+        <div class="brands reveal">
+          <a class="brand-card brand-card--vetlain" href="https://vetlain.cl" rel="noopener">
+            <svg class="brand-card__glyph" viewBox="0 0 100 125" aria-hidden="true"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(1 0 0)"/></svg>
+            <span class="brand-card__tag">Control de plagas</span>
+            <h3>Vetlain</h3>
+            <p class="brand-card__role">Desratización, desinsectación, control de aves y venta de insumos. La unidad fundadora.</p>
+            <span class="brand-card__cta">Visitar vetlain.cl
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a class="brand-card brand-card--vetclean" href="#contacto">
+            <svg class="brand-card__glyph" viewBox="0 0 100 125" aria-hidden="true"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(1 0 0)"/></svg>
+            <span class="brand-card__tag">Sitio en desarrollo</span>
+            <h3>Vetclean</h3>
+            <p class="brand-card__role">Aseo e higiene personal e industrial, sanitización y abastecimiento continuo de insumos.</p>
+            <span class="brand-card__cta">Cotizar por ahora aquí
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a class="brand-card brand-card--modular" href="#reservas">
+            <svg class="brand-card__glyph" viewBox="0 0 100 125" aria-hidden="true"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(1 0 0)"/></svg>
+            <span class="brand-card__tag">Capacitación</span>
+            <h3>VZModular</h3>
+            <p class="brand-card__role">Formación profesional certificada para equipos: plagas, higiene y cumplimiento normativo.</p>
+            <span class="brand-card__cta">Consultar cursos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESERVAS (sin login) ============ -->
+    <section class="booking section" id="reservas">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2>Citas en línea</h2>
+          <p>Evaluación de 15 minutos, gratis y sin crear cuenta: eliges la empresa, nos escribes y coordinamos al tiro.</p>
+        </div>
+        <ul class="booking__list reveal">
+          <li class="booking__row">
+            <span class="booking__glyph" aria-hidden="true">
+              <svg viewBox="0 0 100 125"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(0.5 0.13 155)"/><path d="M50 88 c0 -16 10 -26 24 -28 c-2 16 -10 26 -24 28 Z" fill="oklch(0.95 0.02 155)"/></svg>
+            </span>
+            <div>
+              <p class="booking__meta">Vetlain · 15 min · Gratis</p>
+              <h3>Cotiza tu control de plagas</h3>
+              <p>Ratas, insectos o aves en tu casa o negocio. Evaluación en terreno el mismo día.</p>
+            </div>
+            <a class="btn btn--orange" href="https://wa.me/56939576915?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20de%20control%20de%20plagas%20(Vetlain)" rel="noopener">Agendar por WhatsApp</a>
+          </li>
+          <li class="booking__row">
+            <span class="booking__glyph" aria-hidden="true">
+              <svg viewBox="0 0 100 125"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(0.56 0.13 232)"/><circle cx="43" cy="80" r="9" fill="oklch(0.95 0.02 232)"/><circle cx="62" cy="70" r="5.5" fill="oklch(0.95 0.02 232)"/></svg>
+            </span>
+            <div>
+              <p class="booking__meta">Vetclean · 15 min · Gratis</p>
+              <h3>Cotiza limpieza e higiene</h3>
+              <p>Sanitización, aseo industrial o abastecimiento de insumos para tu operación.</p>
+            </div>
+            <a class="btn btn--orange" href="https://wa.me/56939576915?text=Hola%2C%20quiero%20cotizar%20un%20servicio%20de%20limpieza%20e%20higiene%20(Vetclean)" rel="noopener">Agendar por WhatsApp</a>
+          </li>
+          <li class="booking__row">
+            <span class="booking__glyph" aria-hidden="true">
+              <svg viewBox="0 0 100 125"><path d="M50 6 C50 6 88 54 88 82 a38 38 0 1 1 -76 0 C12 54 50 6 50 6 Z" fill="oklch(0.62 0.02 265)"/><text x="50" y="92" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="30" font-weight="800" fill="oklch(0.98 0 0)">VZ</text></svg>
+            </span>
+            <div>
+              <p class="booking__meta">VZModular · 15 min · Gratis</p>
+              <h3>Conoce nuestros cursos</h3>
+              <p>Formación profesional para tu equipo: plagas, higiene y cumplimiento normativo.</p>
+            </div>
+            <a class="btn btn--orange" href="https://wa.me/56939576915?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20VZModular" rel="noopener">Agendar por WhatsApp</a>
+          </li>
+        </ul>
+        <p class="booking__note">Sin formularios de registro ni contraseñas: <strong>reservar toma menos de un minuto</strong>.</p>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTOS DESTACADOS ============ -->
+    <section class="section" id="destacados">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2>Productos destacados</h2>
+          <p>Lo más pedido del catálogo. Despacho en Talagante y alrededores, precios con IVA incluido.</p>
+        </div>
+
+        <ul class="grid reveal" data-products>
+          <li class="card" data-cat="plagas">
+            <div class="card__media" aria-hidden="true">
+              <span class="card__sku">VL-EKO</span>
+              <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="18" y="12" width="44" height="56" rx="5"/><circle cx="40" cy="34" r="9"/><path d="M40 30v4l3 3M28 56h24"/></svg>
+            </div>
+            <div class="card__body">
+              <span class="card__cat">Control de roedores</span>
+              <h3 class="card__name">Ekomille — captura ecológica</h3>
+              <p class="card__price">$685.000 <small>equipo</small></p>
+              <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
+            </div>
+          </li>
+          <li class="card" data-cat="plagas">
+            <div class="card__media" aria-hidden="true">
+              <span class="card__sku">VL-RB40</span>
+              <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 26h52l-6 34H20l-6-34z"/><path d="M22 26v-6a8 8 0 0 1 8-8h20a8 8 0 0 1 8 8v6"/><path d="M26 38h28M28 48h24"/></svg>
+            </div>
+            <div class="card__body">
+              <span class="card__cat">Control de insectos</span>
+              <h3 class="card__name">RB40 — lámpara UV de captura</h3>
+              <p class="card__price">$265.000</p>
+              <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
+            </div>
+          </li>
+          <li class="card" data-cat="limpieza">
+            <div class="card__media" aria-hidden="true">
+              <span class="card__sku">VC-AMC5</span>
+              <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M34 12h12M36 12v10L22 56a6 6 0 0 0 5.6 8h24.8A6 6 0 0 0 58 56L44 22V12"/><path d="M28 46h24"/></svg>
+            </div>
+            <div class="card__body">
+              <span class="card__cat">Limpieza</span>
+              <h3 class="card__name">Amonio Cuaternario Vetclean 5 L</h3>
+              <p class="card__price">$8.990</p>
+              <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
+            </div>
+          </li>
+          <li class="card" data-cat="epp">
+            <div class="card__media" aria-hidden="true">
+              <span class="card__sku">EP-NIT100</span>
+              <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M30 68V36a4 4 0 0 1-6-4V20a4 4 0 0 1 4-4h2v-4h20v4h2a4 4 0 0 1 4 4v12a4 4 0 0 1-6 4v32H30z"/><path d="M30 44h20"/></svg>
+            </div>
+            <div class="card__body">
+              <span class="card__cat">EPP y desechables</span>
+              <h3 class="card__name">Guantes de nitrilo · caja x100</h3>
+              <p class="card__price">$5.100</p>
+              <button class="btn btn--ink btn--small btn--block" data-add>Agregar al carro</button>
+            </div>
+          </li>
+        </ul>
+
+        <div class="store__foot reveal">
+          <p>El catálogo completo tiene control de plagas, limpieza, EPP y desechables, con filtros por categoría.</p>
+          <a class="btn btn--orange" href="tienda/">Ver toda la tienda →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FRANJA B2B ============ -->
+    <section class="b2b">
+      <div class="wrap b2b__inner">
+        <div class="reveal">
+          <h2>¿Necesitas un programa permanente, no una compra puntual?</h2>
+          <p>Contratos anuales con visitas calendarizadas, insumos incluidos y registros para tus auditorías. Un solo proveedor para plagas, higiene y capacitación.</p>
+        </div>
+        <a class="btn btn--ink reveal" href="#contacto">Hablar con el equipo</a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section contact" id="contacto">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2>Comunícate con nosotros</h2>
+          <p>O aún mejor, ven a visitarnos: nos encanta recibir a nuestros clientes.</p>
+        </div>
+        <div class="contact__grid">
+          <div class="reveal">
+            <h3>VZGroups</h3>
+            <ul class="contact__data">
+              <li><span class="k">WhatsApp</span><a href="https://wa.me/56939576915" rel="noopener">+56 9 3957 6915</a></li>
+              <li><span class="k">Dirección</span><span>Juana Canales 987, Talagante, Región Metropolitana</span></li>
+              <li><span class="k">Correo</span><a href="mailto:contacto@vzgroups.com">contacto@vzgroups.com</a></li>
+            </ul>
+            <div class="hours">
+              <strong>Horario de atención</strong>
+              <table>
+                <tr><td>Lunes a viernes</td><td>09:00 – 17:00</td></tr>
+                <tr><td>Sábado</td><td>Cerrado</td></tr>
+                <tr><td>Domingo</td><td>Cerrado</td></tr>
+              </table>
+            </div>
+          </div>
+          <form class="form reveal" data-demo-form>
+            <h3>Escríbenos</h3>
+            <div class="field">
+              <label for="f-nombre">Nombre</label>
+              <input id="f-nombre" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-mail">Correo electrónico</label>
+              <input id="f-mail" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="f-msg">Mensaje</label>
+              <textarea id="f-msg" placeholder="Cuéntanos qué necesitas y en qué comuna estás"></textarea>
+            </div>
+            <button class="btn btn--orange" type="submit">Enviar mensaje</button>
+            <p class="form__ok" role="status">✓ Demo: tu mensaje llegaría al correo del equipo VZGroups.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© 2026 VZGroups — Todos los derechos reservados</span>
+      <ul class="footer__links">
+        <li><a href="https://vetlain.cl" rel="noopener">Vetlain</a></li>
+        <li><a href="#empresas">Vetclean</a></li>
+        <li><a href="#empresas">VZModular</a></li>
+      </ul>
+      <span>Demo C — Tienda · Propuesta de rediseño</span>
+    </div>
+  </footer>
+
+  <a class="wsp" href="https://wa.me/56939576915" rel="noopener" aria-label="Escribir a VZGroups por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.2z"/></svg>
+  </a>
+
+  <div class="toast" data-toast role="status">Producto agregado al carro (demo)</div>
+
+  <script>
+    document.documentElement.classList.add("js");
+
+    // Reveals
+    (function () {
+      if (!("IntersectionObserver" in window) ||
+          matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+      document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+    })();
+
+    // Nav móvil
+    (function () {
+      var nav = document.querySelector(".nav");
+      var btn = document.querySelector("[data-nav-toggle]");
+      btn.addEventListener("click", function () {
+        var open = nav.classList.toggle("nav--open");
+        btn.setAttribute("aria-expanded", open);
+        btn.textContent = open ? "Cerrar" : "Menú";
+      });
+      document.querySelectorAll(".nav__links a").forEach(function (a) {
+        a.addEventListener("click", function () {
+          nav.classList.remove("nav--open");
+          btn.setAttribute("aria-expanded", "false");
+          btn.textContent = "Menú";
+        });
+      });
+    })();
+
+    // Carro demo persistente entre home y tienda + toast
+    (function () {
+      var KEY = "vz-cart-demo";
+      var count = parseInt(sessionStorage.getItem(KEY), 10) || 0;
+      var badge = document.querySelector("[data-cart-count]");
+      var toast = document.querySelector("[data-toast]");
+      var t;
+      badge.textContent = count;
+      document.querySelectorAll("[data-add]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          count++;
+          badge.textContent = count;
+          sessionStorage.setItem(KEY, count);
+          toast.classList.add("show");
+          clearTimeout(t);
+          t = setTimeout(function () { toast.classList.remove("show"); }, 1800);
+        });
+      });
+    })();
+
+    // Formulario demo
+    (function () {
+      var form = document.querySelector("[data-demo-form]");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        form.classList.add("sent");
+      });
+    })();
+  </script>
+  <script src="../shared/switcher.js" data-demo="c" defer></script>
+</body>
+</html>

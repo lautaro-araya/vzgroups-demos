@@ -1,0 +1,109 @@
+/* ============================================================
+   VZGroups — Botonera flotante para navegar entre demos.
+   Se inyecta vía switcher.js en las 3 demos. Estética neutra
+   (funciona sobre fondos claros y oscuros), no compite con
+   ninguna de las direcciones de diseño.
+   ============================================================ */
+
+.vz-switcher {
+  position: fixed;
+  left: 14px;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 90; /* por sobre contenido y navs sticky, bajo modales */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 7px;
+  border-radius: 999px;
+  background: oklch(0.13 0.01 250 / 0.92);
+  border: 1px solid oklch(1 0 0 / 0.14);
+  box-shadow: 0 8px 28px oklch(0 0 0 / 0.35);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.vz-switcher__label {
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: oklch(0.98 0 0 / 0.92);
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  margin-block: 4px 2px;
+  user-select: none;
+}
+
+.vz-switcher__btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid oklch(1 0 0 / 0.18);
+  background: transparent;
+  color: oklch(0.97 0 0);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.18s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.18s cubic-bezier(0.22, 1, 0.36, 1),
+              scale 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.vz-switcher__btn:hover { background: oklch(1 0 0 / 0.14); scale: 1.08; }
+
+.vz-switcher__btn:focus-visible {
+  outline: 2px solid oklch(0.85 0.16 150);
+  outline-offset: 2px;
+}
+
+.vz-switcher__btn[aria-current="true"] {
+  background: oklch(0.97 0 0);
+  color: oklch(0.15 0.01 250);
+  border-color: oklch(0.97 0 0);
+  cursor: default;
+}
+
+/* Tooltip con el nombre de la demo */
+.vz-switcher__btn::after {
+  content: attr(data-name);
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  translate: 0 -50%;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: oklch(0.13 0.01 250 / 0.95);
+  border: 1px solid oklch(1 0 0 / 0.14);
+  color: oklch(0.97 0 0);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease-out;
+}
+
+.vz-switcher__btn:hover::after,
+.vz-switcher__btn:focus-visible::after { opacity: 1; }
+
+@media (max-width: 720px) {
+  .vz-switcher {
+    left: 50%;
+    top: auto;
+    bottom: 12px;
+    translate: -50% 0;
+    flex-direction: row;
+    padding: 6px 12px;
+  }
+  .vz-switcher__label { writing-mode: horizontal-tb; rotate: none; margin: 0 4px 0 0; }
+  .vz-switcher__btn { width: 38px; height: 38px; }
+  .vz-switcher__btn::after { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vz-switcher__btn { transition: none; }
+}

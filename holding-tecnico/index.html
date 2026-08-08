@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VZGroups — Holding sanitario · Control de plagas, higiene y capacitación</title>
+  <meta name="description" content="VZGroups integra Vetlain (control de plagas), Vetclean (higiene industrial) y VZModular (capacitación) bajo un mismo contrato. Talagante y Región Metropolitana. ISO 9001.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Chivo+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top">
+        <span class="nav__logo">VZ<em>Groups</em></span>
+        <span class="nav__tag">Holding sanitario · Talagante, RM</span>
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav__links">
+          <li><a href="#unidades">Unidades</a></li>
+          <li><a href="#cobertura">Cobertura</a></li>
+          <li><a href="#certificaciones">Certificaciones</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--solid btn--small nav__cta" href="#contacto">Solicitar cotización</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" data-nav-toggle>MENÚ</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div>
+          <h1 class="display">Tres servicios críticos.<br><span class="accent">Un solo proveedor.</span></h1>
+          <p class="hero__lede">Control de plagas, higiene industrial y capacitación para operaciones que no pueden detenerse: plantas de alimentos, bodegas, retail, colegios y edificios. Contrato anual, registros de cada visita y respaldo escrito.</p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#contacto">Solicitar cotización</a>
+            <a class="btn btn--ghost" href="https://wa.me/56939576915" rel="noopener">WhatsApp directo</a>
+          </div>
+          <p class="hero__note">SIN COSTO DE VISITA · COTIZACIÓN EN 24H · FACTURA ELECTRÓNICA</p>
+        </div>
+
+        <div class="board" role="img" aria-label="Panel de estado operacional: las tres unidades de VZGroups operativas y la certificación ISO 9001 vigente">
+          <div class="board__head">
+            <span>Red VZGroups — Estado operacional</span>
+            <span>Talagante · RM</span>
+          </div>
+          <ul class="board__rows">
+            <li class="board__row" data-u="vetlain">
+              <span class="board__unit">VETLAIN</span>
+              <span class="board__desc">Control de plagas · desratización · aves</span>
+              <span class="board__status"><i class="dot"></i>OPERATIVO</span>
+            </li>
+            <li class="board__row" data-u="vetclean">
+              <span class="board__unit">VETCLEAN</span>
+              <span class="board__desc">Higiene y sanitización industrial</span>
+              <span class="board__status"><i class="dot dot--cyan"></i>OPERATIVO</span>
+            </li>
+            <li class="board__row" data-u="modular">
+              <span class="board__unit">VZMODULAR</span>
+              <span class="board__desc">Capacitación y formación profesional</span>
+              <span class="board__status"><i class="dot dot--amber"></i>AGENDANDO</span>
+            </li>
+            <li class="board__row" data-u="iso">
+              <span class="board__unit">ISO 9001</span>
+              <span class="board__desc">Sistema de gestión de calidad</span>
+              <span class="board__status"><i class="dot"></i>VIGENTE</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CINTA DE DATOS ============ -->
+    <div class="strip" aria-label="Cifras de la empresa">
+      <div class="wrap strip__inner">
+        <span class="strip__item"><strong>+20</strong> años de oficio</span>
+        <span class="strip__sep">/</span>
+        <span class="strip__item"><strong>3</strong> unidades de negocio</span>
+        <span class="strip__sep">/</span>
+        <span class="strip__item"><strong>1</strong> contrato integrado</span>
+        <span class="strip__sep">/</span>
+        <span class="strip__item"><strong>Mismo día</strong> de respuesta en zona</span>
+      </div>
+    </div>
+
+    <!-- ============ UNIDADES ============ -->
+    <section class="section" id="unidades">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="display">Unidades de negocio</h2>
+          <p class="section__lede">Cada unidad opera con equipo y protocolos propios. El contrato, la factura y el responsable son uno solo.</p>
+        </div>
+
+        <article class="unit unit--vetlain reveal">
+          <div class="unit__id">
+            <span class="unit__chip">Unidad 01 · Operativa</span>
+            <h3 class="unit__name display">Vetlain</h3>
+            <p class="unit__role">Control de plagas y mantención ambiental. La unidad fundadora del grupo.</p>
+          </div>
+          <div class="unit__body">
+            <p>Desratización, desinsectación, control de aves y sanitización con certificación ISO 9001. Programas permanentes para plantas de alimentos y bodegas bajo norma sanitaria, con registro y trazabilidad de cada visita.</p>
+            <ul class="unit__caps">
+              <li>Desratización con estaciones certificadas</li>
+              <li>Desinsectación de bajo impacto</li>
+              <li>Disuasión y captura de aves</li>
+              <li>Programas bajo norma para auditorías</li>
+            </ul>
+            <div class="unit__meta">
+              <a class="btn btn--ghost btn--small" href="https://vetlain.cl" rel="noopener">Visitar vetlain.cl</a>
+              <span class="unit__link mono">ISO 9001 · +20 AÑOS · RESPUESTA MISMO DÍA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="unit unit--vetclean reveal">
+          <div class="unit__id">
+            <span class="unit__chip">Unidad 02 · Operativa</span>
+            <h3 class="unit__name display">Vetclean</h3>
+            <p class="unit__role">Aseo, higiene y venta de insumos de limpieza personal e industrial.</p>
+          </div>
+          <div class="unit__body">
+            <p>Sanitización de superficies y ambientes de trabajo, programas de aseo industrial y provisión de insumos: desde amonio cuaternario y cloro hasta EPP desechable. Abastecimiento continuo para contratos vigentes.</p>
+            <ul class="unit__caps">
+              <li>Sanitización de ambientes de trabajo</li>
+              <li>Programas de aseo industrial</li>
+              <li>Insumos de limpieza por volumen</li>
+              <li>EPP y desechables certificados</li>
+            </ul>
+            <div class="unit__meta">
+              <a class="btn btn--ghost btn--small" href="#contacto">Cotizar servicio</a>
+              <span class="unit__link mono">SITIO PROPIO EN DESARROLLO</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="unit unit--modular reveal">
+          <div class="unit__id">
+            <span class="unit__chip">Unidad 03 · Agendando</span>
+            <h3 class="unit__name display">VZModular</h3>
+            <p class="unit__role">Capacitación profesional para equipos de aseo, manipulación y control.</p>
+          </div>
+          <div class="unit__body">
+            <p>Cursos y entrenamiento en terreno para el personal de nuestros clientes: manejo integrado de plagas, protocolos de higiene y cumplimiento normativo. La formación que las auditorías piden y casi nadie ofrece localmente.</p>
+            <ul class="unit__caps">
+              <li>Manejo integrado de plagas (MIP)</li>
+              <li>Protocolos de higiene y BPM</li>
+              <li>Entrenamiento en terreno</li>
+              <li>Certificados de asistencia</li>
+            </ul>
+            <div class="unit__meta">
+              <a class="btn btn--ghost btn--small" href="#contacto">Consultar próximos cursos</a>
+              <span class="unit__link mono">PRÓXIMO CICLO · SEPTIEMBRE 2026</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ COBERTURA ============ -->
+    <section class="coverage section" id="cobertura">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="display">Cobertura operacional</h2>
+          <p class="section__lede">Base en Talagante. Los tiempos de respuesta son compromisos de contrato, no promesas comerciales.</p>
+        </div>
+
+        <div class="coverage__grid">
+          <figure class="map-frame reveal">
+            <div id="coverage-map"
+                 role="application"
+                 aria-label="Mapa de la Región Metropolitana con la base de VZGroups en Talagante, anillos de tiempo de respuesta y las comunas cubiertas: Peñaflor, El Monte, Isla de Maipo, Padre Hurtado, Calera de Tango, Maipú, Buin, Paine, Melipilla, Curacaví y Santiago centro"></div>
+            <figcaption class="map-legend">
+              <span><i class="l1"></i>Respuesta mismo día</span>
+              <span><i class="l2"></i>24 horas</span>
+              <span><i class="l3"></i>48 horas</span>
+            </figcaption>
+          </figure>
+
+          <div class="reveal">
+            <table class="coverage-table">
+              <caption>Compromisos de respuesta por zona</caption>
+              <thead>
+                <tr><th scope="col">Zona</th><th scope="col">Comunas</th><th scope="col">Respuesta</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Talagante</td><td>Talagante, Peñaflor, El Monte, Isla de Maipo</td><td>MISMO DÍA</td></tr>
+                <tr><td>Poniente</td><td>Padre Hurtado, Calera de Tango, Maipú</td><td>24 H</td></tr>
+                <tr><td>Sur</td><td>Buin, Paine</td><td>24 H</td></tr>
+                <tr><td>Extendida</td><td>Melipilla, Curacaví, Santiago centro</td><td>48 H</td></tr>
+              </tbody>
+            </table>
+            <p class="coverage__note">¿Tu operación está fuera de estas zonas? Para contratos anuales evaluamos cobertura extendida en toda la Región Metropolitana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESO ============ -->
+    <section class="section" id="proceso">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="display">Cómo se contrata</h2>
+          <p class="section__lede">Cuatro pasos, de la primera llamada al plan anual funcionando. Sin login, sin carrito, sin letra chica.</p>
+        </div>
+        <ol class="steps reveal">
+          <li class="step">
+            <h3>Evaluación en terreno</h3>
+            <p>Visitamos tu operación sin costo, identificamos riesgos y levantamos lo que la norma exige para tu rubro.</p>
+          </li>
+          <li class="step">
+            <h3>Propuesta técnica</h3>
+            <p>Recibes propuesta técnica y económica por escrito: alcance, frecuencias, productos y responsables.</p>
+          </li>
+          <li class="step">
+            <h3>Plan anual calendarizado</h3>
+            <p>Firmamos contrato con calendario de visitas, insumos incluidos y tarifas fijas por 12 meses.</p>
+          </li>
+          <li class="step">
+            <h3>Ejecución con registros</h3>
+            <p>Cada visita queda documentada: informes, certificados y trazabilidad listos para tu próxima auditoría.</p>
+          </li>
+        </ol>
+        <p class="steps__note">TIEMPO PROMEDIO ENTRE PRIMERA LLAMADA Y PLAN OPERANDO: 10 DÍAS HÁBILES</p>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICACIONES ============ -->
+    <section class="paper section" id="certificaciones">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="display">Registro documental</h2>
+          <p class="section__lede">Lo que tu auditoría va a pedir, ya está emitido. Copias disponibles para clientes con contrato.</p>
+        </div>
+        <ul class="ledger reveal">
+          <li class="ledger__row">
+            <span class="ledger__id">DOC-9001</span>
+            <div class="ledger__doc">
+              <strong>Certificación ISO 9001:2015</strong>
+              <span>Sistema de gestión de calidad · auditoría anual aprobada, renovada julio 2026</span>
+            </div>
+            <span class="ledger__state">Vigente</span>
+          </li>
+          <li class="ledger__row">
+            <span class="ledger__id">DOC-SEREMI</span>
+            <div class="ledger__doc">
+              <strong>Resolución sanitaria SEREMI de Salud RM</strong>
+              <span>Autorización para aplicación de plaguicidas de uso sanitario y doméstico</span>
+            </div>
+            <span class="ledger__state">Vigente</span>
+          </li>
+          <li class="ledger__row">
+            <span class="ledger__id">REG-VISITA</span>
+            <div class="ledger__doc">
+              <strong>Registros de visita con trazabilidad</strong>
+              <span>Informe técnico por cada intervención: productos, dosis, hallazgos y firma del responsable</span>
+            </div>
+            <span class="ledger__state">Por servicio</span>
+          </li>
+          <li class="ledger__row">
+            <span class="ledger__id">CERT-CAP</span>
+            <div class="ledger__doc">
+              <strong>Certificados de capacitación VZModular</strong>
+              <span>Constancias de formación para el personal de clientes con programa vigente</span>
+            </div>
+            <span class="ledger__state ledger__state--pending">Por curso</span>
+          </li>
+        </ul>
+        <p class="paper__foot">Los documentos se emiten a nombre de la razón social del cliente y quedan disponibles en cada informe de visita. Para licitaciones, preparamos el expediente completo de respaldo.</p>
+      </div>
+    </section>
+
+    <!-- ============ CATÁLOGO ============ -->
+    <section class="catalog section" id="catalogo">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="display">Insumos para tu operación</h2>
+          <p class="section__lede">Equipos y consumibles seleccionados del catálogo. Precios por volumen, con despacho en zona de cobertura.</p>
+        </div>
+        <ul class="products reveal">
+          <li class="product">
+            <span class="product__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 17h6"/></svg>
+            </span>
+            <div>
+              <h3 class="product__name">Ekomille</h3>
+              <span class="product__cat">Control de roedores · Equipo</span>
+            </div>
+            <p class="product__desc">Captura electromecánica ecológica de roedores, sin veneno. Contador de capturas, autonomía 24h/365 días.</p>
+            <a class="btn btn--ghost btn--small product__cta" href="#contacto">Cotizar</a>
+          </li>
+          <li class="product">
+            <span class="product__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h16l-2 12H6L4 8z"/><path d="M9 8V5a3 3 0 0 1 6 0v3"/><path d="M8 13l8 2M8 16l8-2"/></svg>
+            </span>
+            <div>
+              <h3 class="product__name">RB40</h3>
+              <span class="product__cat">Control de insectos · Equipo</span>
+            </div>
+            <p class="product__desc">Lámpara UV de captura para insectos voladores, apta para zonas de producción de alimentos.</p>
+            <a class="btn btn--ghost btn--small product__cta" href="#contacto">Cotizar</a>
+          </li>
+          <li class="product">
+            <span class="product__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3h6M10 3v4L5 20a1.5 1.5 0 0 0 1.4 2h11.2a1.5 1.5 0 0 0 1.4-2L14 7V3"/><path d="M7.5 14h9"/></svg>
+            </span>
+            <div>
+              <h3 class="product__name">Amonio Cuaternario Vetclean</h3>
+              <span class="product__cat">Higiene · Consumible</span>
+            </div>
+            <p class="product__desc">Detergente higienizante concentrado para superficies lavables, equipos y cámaras frigoríficas.</p>
+            <a class="btn btn--ghost btn--small product__cta" href="#contacto">Cotizar</a>
+          </li>
+          <li class="product">
+            <span class="product__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 21V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v13"/><path d="M7 12h10M10 6V3h4v3"/></svg>
+            </span>
+            <div>
+              <h3 class="product__name">EPP y desechables</h3>
+              <span class="product__cat">Seguridad · Consumible</span>
+            </div>
+            <p class="product__desc">Guantes de nitrilo, mascarillas, cofias y cubre calzado en cajas industriales, reposición programada.</p>
+            <a class="btn btn--ghost btn--small product__cta" href="#contacto">Cotizar</a>
+          </li>
+        </ul>
+        <div class="catalog__foot reveal">
+          <p>Clientes con contrato vigente acceden a precios por volumen, facturación a 30 días y reposición programada de consumibles.</p>
+          <a class="btn btn--solid" href="#contacto">Pedir catálogo completo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section" id="contacto">
+      <div class="wrap contact__grid contact">
+        <div class="reveal">
+          <h2 class="display">Cotiza sin vueltas</h2>
+          <p class="contact__lede">Cuéntanos qué necesita tu operación y te respondemos el mismo día hábil. La visita de evaluación no tiene costo.</p>
+          <ul class="contact__data">
+            <li><span class="k">WhatsApp</span><a href="https://wa.me/56939576915" rel="noopener">+56 9 3957 6915</a></li>
+            <li><span class="k">Teléfono</span><a href="tel:+56939576915">+56 9 3957 6915</a></li>
+            <li><span class="k">Dirección</span><span>Juana Canales 987, Talagante, RM</span></li>
+            <li><span class="k">Horario</span><span>Lunes a viernes · 09:00 – 17:00</span></li>
+          </ul>
+          <a class="btn btn--ghost" href="https://wa.me/56939576915" rel="noopener">Escribir por WhatsApp</a>
+        </div>
+
+        <form class="form reveal" data-demo-form>
+          <span class="form__title">Solicitud de cotización</span>
+          <div class="form__row">
+            <div class="field">
+              <label for="f-nombre">Nombre</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-empresa">Empresa</label>
+              <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="f-fono">Teléfono</label>
+              <input id="f-fono" name="telefono" type="tel" autocomplete="tel" required>
+            </div>
+            <div class="field">
+              <label for="f-comuna">Comuna</label>
+              <input id="f-comuna" name="comuna" type="text">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-servicio">¿Qué necesitas?</label>
+            <select id="f-servicio" name="servicio">
+              <option>Control de plagas (Vetlain)</option>
+              <option>Higiene y sanitización (Vetclean)</option>
+              <option>Capacitación (VZModular)</option>
+              <option>Contrato integrado — las tres unidades</option>
+              <option>Insumos y equipos</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Cuéntanos brevemente</label>
+            <textarea id="f-msg" name="mensaje" placeholder="Ej: planta de alimentos en Peñaflor, necesitamos programa anual para auditoría de octubre"></textarea>
+          </div>
+          <button class="btn btn--solid" type="submit">Enviar solicitud</button>
+          <p class="form__ok" role="status">✓ Demo: aquí la solicitud llegaría por correo y WhatsApp al equipo VZGroups.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© 2026 VZGROUPS · TALAGANTE, CHILE</span>
+      <ul class="footer__units">
+        <li><a href="https://vetlain.cl" rel="noopener">VETLAIN</a></li>
+        <li><a href="#unidades">VETCLEAN</a></li>
+        <li><a href="#unidades">VZMODULAR</a></li>
+      </ul>
+      <span>DEMO A — HOLDING TÉCNICO · PROPUESTA DE REDISEÑO</span>
+    </div>
+  </footer>
+
+  <a class="wsp" href="https://wa.me/56939576915" rel="noopener" aria-label="Escribir a VZGroups por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.2z"/></svg>
+  </a>
+
+  <script>
+    document.documentElement.classList.add("js");
+
+    // Reveals — mejora progresiva sobre contenido visible por defecto
+    (function () {
+      if (!("IntersectionObserver" in window) ||
+          matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+      document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+    })();
+
+    // Nav móvil
+    (function () {
+      var nav = document.querySelector(".nav");
+      var btn = document.querySelector("[data-nav-toggle]");
+      btn.addEventListener("click", function () {
+        var open = nav.classList.toggle("nav--open");
+        btn.setAttribute("aria-expanded", open);
+        btn.textContent = open ? "CERRAR" : "MENÚ";
+      });
+      document.querySelectorAll(".nav__links a").forEach(function (a) {
+        a.addEventListener("click", function () {
+          nav.classList.remove("nav--open");
+          btn.setAttribute("aria-expanded", "false");
+          btn.textContent = "MENÚ";
+        });
+      });
+    })();
+
+    // Formulario demo
+    (function () {
+      var form = document.querySelector("[data-demo-form]");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        form.classList.add("sent");
+      });
+    })();
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // ============ Mapa de cobertura (Leaflet + tiles oscuros CARTO) ============
+    (function () {
+      var el = document.getElementById("coverage-map");
+      if (!el || typeof L === "undefined") return; // sin red o sin librería: la tabla sigue contando la historia
+
+      var BASE = [-33.6639, -70.9276]; // Talagante
+
+      var map = L.map(el, {
+        scrollWheelZoom: false,      // no secuestrar el scroll de la página
+        attributionControl: true,
+        zoomControl: true
+      });
+
+      // dark_nolabels: mismo basemap oscuro pero sin topónimos.
+      // Las comunas las rotula la propia página, así no se duplican.
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png", {
+        attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> &copy; <a href='https://carto.com/attributions'>CARTO</a>",
+        subdomains: "abcd",
+        maxZoom: 19
+      }).addTo(map);
+
+      // Anillos de compromiso de respuesta desde la base
+      var GREEN = "#3ddc84";
+      L.circle(BASE, { radius: 9000,  color: GREEN, weight: 1.5, opacity: 0.6,  fillColor: GREEN, fillOpacity: 0.06 }).addTo(map);
+      L.circle(BASE, { radius: 19000, color: GREEN, weight: 1.2, opacity: 0.32, fill: false, dashArray: "5 7" }).addTo(map);
+      L.circle(BASE, { radius: 34000, color: GREEN, weight: 1,   opacity: 0.18, fill: false, dashArray: "2 8" }).addTo(map);
+
+      // Comunas por anillo: 1 = mismo día, 2 = 24 h, 3 = 48 h
+      // dir: hacia dónde sale la etiqueta, para que no se pisen entre vecinas
+      var puntos = [
+        { n: "Peñaflor",        c: [-33.6062, -70.8769], t: 1, dir: "right" },
+        { n: "El Monte",        c: [-33.6797, -70.9863], t: 1, dir: "left" },
+        { n: "Isla de Maipo",   c: [-33.7492, -70.8954], t: 1, dir: "right" },
+        { n: "Padre Hurtado",   c: [-33.5739, -70.8092], t: 2, dir: "right" },
+        { n: "Calera de Tango", c: [-33.6280, -70.7660], t: 2, dir: "right" },
+        { n: "Maipú",           c: [-33.5110, -70.7580], t: 2, dir: "right" },
+        { n: "Buin",            c: [-33.7328, -70.7420], t: 2, dir: "right" },
+        { n: "Paine",           c: [-33.8078, -70.7410], t: 2, dir: "right" },
+        { n: "Melipilla",       c: [-33.6890, -71.2150], t: 3, dir: "right" },
+        { n: "Curacaví",        c: [-33.4110, -71.1440], t: 3, dir: "right" },
+        { n: "Santiago centro", c: [-33.4489, -70.6693], t: 3, dir: "left" }
+      ];
+
+      var estilos = {
+        1: { radius: 6, color: GREEN, weight: 1.5, fillColor: GREEN, fillOpacity: 0.9 },
+        2: { radius: 5, color: GREEN, weight: 1.2, fillColor: GREEN, fillOpacity: 0.45 },
+        3: { radius: 4, color: "#8b93a3", weight: 1.2, fillColor: "#8b93a3", fillOpacity: 0.7 }
+      };
+      var tips = { 1: "mismo día", 2: "24 h", 3: "48 h" };
+
+      puntos.forEach(function (p) {
+        L.circleMarker(p.c, estilos[p.t])
+          .addTo(map)
+          .bindTooltip(p.n.toUpperCase(), {
+            permanent: true,
+            direction: p.dir,
+            offset: [p.dir === "left" ? -8 : 8, 0],
+            className: "map-tip map-tip--t" + p.t
+          })
+          .bindPopup("<strong>" + p.n + "</strong><br>Respuesta comprometida: " + tips[p.t]);
+      });
+
+      // Base operacional: marcador destacado
+      L.circleMarker(BASE, { radius: 9, color: "#f2f4f7", weight: 2, fillColor: GREEN, fillOpacity: 1 })
+        .addTo(map)
+        .bindTooltip("TALAGANTE — BASE", {
+          permanent: true,
+          direction: "bottom",
+          offset: [0, 10],
+          className: "map-tip map-tip--base"
+        })
+        .bindPopup("<strong>VZGroups — base operacional</strong><br>Juana Canales 987, Talagante");
+
+      // Encuadre: todos los puntos + un respiro
+      map.fitBounds(L.latLngBounds(puntos.map(function (p) { return p.c; }).concat([BASE])).pad(0.12));
+    })();
+  </script>
+  <script src="../shared/switcher.js" data-demo="a" defer></script>
+</body>
+</html>
