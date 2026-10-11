@@ -1,13 +1,39 @@
-# Documentos internos — NO publicar.
-# El informe critica el sitio actual del cliente y PRODUCT.md contiene
-# la estrategia y anti-referencias. Se comparten a mano, no por el repo.
+# Documentos internos — NO publicar (estrategia y diagnóstico del cliente).
 informe-diagnostico-vzgroups.txt
 PRODUCT.md
 
+node_modules
+dist
+dist-ssr
+*.local
+.vercel
+*.tsbuildinfo
+
+# imágenes subidas desde el panel en desarrollo local (en producción van a
+# Vercel Blob, no al repo)
+public/uploads
+
+# variables de entorno (secretos: DATABASE_URL, JWT_SECRET…)
+.env
+.env.*
+!.env.example
+
 # Configuración local de herramientas
 .claude/
+.impeccable/review/
+.impeccable/mocks/
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.email-preview/
 
 # Basura de sistema
 Thumbs.db
 desktop.ini
 .DS_Store
+.impeccable/questions/

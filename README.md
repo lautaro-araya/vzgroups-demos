@@ -1,42 +1,42 @@
-# VZGroups — Propuestas de rediseño
+# VZ Groups — vzgroups.com
 
-Tres direcciones de diseño para recrear **vzgroups.com** fuera del modelador de GoDaddy.
-Front-end estático: HTML, CSS y JavaScript sin build ni dependencias de compilación.
+Sitio del holding VZ Groups (Vetlain, Vetclean, VZModular) con catálogo de
+equipos profesionales para control de plagas y solicitud de cotización.
 
-## Ver las demos
+Mismo stack que el sitio de Vetlain: React + Vite + Tailwind en el front,
+Express como función serverless en Vercel, Postgres en Neon con Drizzle, y
+prerender de HTML estático en el build para SEO.
 
-**https://lautaro-araya.github.io/vzgroups-demos/**
+## Desarrollo
 
-Cada demo tiene una **botonera flotante A · B · C** para saltar entre las tres sin volver a un índice.
-
-| | Demo | Dirección | Ruta |
-|---|---|---|---|
-| **A** | Holding Técnico | Grafito oscuro, telemetría, mapa de cobertura real, un color por unidad de negocio | [`/holding-tecnico/`](./holding-tecnico/) |
-| **B** | Institucional | Verde botella, tipografía serif, fotografía documental, memoria corporativa | [`/institucional/`](./institucional/) |
-| **C** | Tienda | Tinta y naranja señal, catálogo mayorista, e-commerce + hub de marcas | [`/ecommerce/`](./ecommerce/) |
-
-La Demo C tiene además una página de tienda completa en [`/ecommerce/tienda/`](./ecommerce/tienda/).
-
-## Estructura
-
-```
-├── index.html            Redirección a la Demo A
-├── holding-tecnico/      Demo A
-├── institucional/        Demo B
-├── ecommerce/            Demo C (home con destacados)
-│   └── tienda/           Demo C — catálogo completo
-└── shared/               Botonera de navegación entre demos
+```bash
+npm install
+cp .env.example .env   # opcional: sin DATABASE_URL se usa el catálogo semilla
+npm run dev            # sitio en :5173, API en :8787
 ```
 
-## Stack
+Sin base de datos el sitio funciona en modo lectura con el catálogo de
+`server/db/seed-products.ts`; el envío de cotizaciones responde 503.
 
-Sin framework ni build step. Tipografías desde Google Fonts, fotografía desde Unsplash
-y el mapa de cobertura con [Leaflet](https://leafletjs.com/) sobre tiles oscuros de
-CARTO/OpenStreetMap (sin API key). Todo funciona con rutas relativas, así que el sitio
-se sirve igual desde la raíz o desde un subdirectorio.
+## Rutas
 
-## Nota sobre los datos
+| Ruta | Qué es |
+|---|---|
+| `/` | Portada: holding + líneas de producto |
+| `/productos` | Catálogo (`?plaga=` filtra por plaga, `?q=` busca) |
+| `/productos/linea/:linea` | Línea de producto (roedores, insectos, aves) |
+| `/productos/:slug` | Ficha técnica |
+| `/cotizacion` | Lista de cotización + formulario |
+| `/nosotros` | El holding y sus unidades |
+| `/admin` | Panel: cotizaciones, productos, contacto |
 
-Precios, fechas, cifras y comunas son **referenciales para la demo**. El catálogo del
-sitio actual tiene precios inconsistentes que deben auditarse producto por producto
-antes de cualquier migración.
+## Puesta en marcha en Vercel
+
+1. Crear el proyecto en Vercel desde este repo y conectar Neon (Storage).
+2. Variables: `JWT_SECRET`, `SETUP_TOKEN`, `ADMIN_EMAIL`, `ADMIN_PASSWORD`,
+   `SITE_URL`, `SMTP_USER`, `SMTP_PASS` (ver `.env.example`).
+3. Visitar una vez `/api/setup?token=SETUP_TOKEN` (crea tablas y carga el
+   catálogo), luego borrar `SETUP_TOKEN`.
+4. Crear un Deploy Hook (`DEPLOY_HOOK_URL`) para el botón "Publicar cambios".
+
+Sistema visual: ver `DESIGN.md`.

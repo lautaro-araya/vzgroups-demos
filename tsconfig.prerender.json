@@ -1,0 +1,7 @@
+{
+  "//": "Solo para el RUNTIME del prerender con tsx (no para typecheck). Amplía el",
+  "//2": "include a src/ para que tsx aplique jsx:react-jsx (runtime automático) a",
+  "//3": "los componentes del sitio; si no, fallan con 'React is not defined'.",
+  "extends": "./tsconfig.server.json",
+  "include": ["server", "api", "src"]
+}
