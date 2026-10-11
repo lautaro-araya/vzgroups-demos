@@ -297,12 +297,12 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-vz-line bg-white/95 backdrop-blur-sm">
-      <div className="mx-auto flex h-[4.5rem] max-w-site items-center gap-6 px-5">
+      <div className="flex h-[4.5rem] items-center gap-8 px-5 lg:px-8">
         <Link to="/" className="shrink-0" aria-label="VZ Groups, inicio">
           <img src={A + 'brand/logo.png'} alt="VZ Groups" width={640} height={272} className="h-12 w-auto sm:h-14" />
         </Link>
 
-        <nav aria-label="Principal" className="ml-4 hidden items-center gap-7 md:flex">
+        <nav aria-label="Principal" className="ml-auto hidden items-center gap-7 md:flex">
           {nav.map((n) => (
             <NavLink key={n.to} to={n.to} className={linkCls}>
               {n.label}
@@ -310,7 +310,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto flex items-center gap-2 md:ml-0">
           <button
             type="button"
             onClick={() => setDrawer(true)}
