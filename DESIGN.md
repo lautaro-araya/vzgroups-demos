@@ -19,7 +19,7 @@ colors:
 typography:
   display:
     fontFamily: "Archivo, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2.3rem, 5.4vw, 4.1rem)"
+    fontSize: "clamp(2.3rem, 5vw, 3.9rem)"
     fontWeight: 800
     lineHeight: 1.02
     letterSpacing: "-0.025em"
@@ -135,7 +135,7 @@ Restringido: neutros fríos más un azul que manda y un verde con un solo trabaj
 **Character:** Archivo expandido da el peso industrial de una placa de equipo; Source Sans 3 mantiene las fichas técnicas legibles en tramos largos.
 
 ### Hierarchy
-- **Display** (800, `clamp(2.3rem, 5.4vw, 4.1rem)`, 1.02): sólo el titular del hero.
+- **Display** (800, `clamp(2.3rem, 5vw, 3.9rem)`, 1.02): sólo el titular del hero.
 - **Headline** (700, `clamp(1.75rem, 3.4vw, 2.6rem)`, 1.05, clase `.h-section`): titulares de sección y de página.
 - **Title** (700, 1.125rem): nombres de producto, unidades, pasos.
 - **Body** (400, 1.0625rem, 1.6): texto corrido; fichas técnicas a 68ch máximo.
