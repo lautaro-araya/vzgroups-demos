@@ -41,6 +41,15 @@ typography:
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.6
+  body-sm:
+    fontFamily: "'Source Sans 3', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "0.95rem"
+    fontWeight: 400
+    lineHeight: 1.35
+  caption:
+    fontFamily: "'Source Sans 3', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "0.8rem"
+    fontWeight: 600
   label:
     fontFamily: "Archivo, ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.875rem"
@@ -139,6 +148,8 @@ Restringido: neutros fríos más un azul que manda y un verde con un solo trabaj
 - **Headline** (700, `clamp(1.75rem, 3.4vw, 2.6rem)`, 1.05, clase `.h-section`): titulares de sección y de página.
 - **Title** (700, 1.125rem): nombres de producto, unidades, pasos.
 - **Body** (400, 1.0625rem, 1.6): texto corrido; fichas técnicas a 68ch máximo.
+- **Body small** (400, 0.95rem, 1.35): resúmenes en tarjetas, metadatos, botones y enlaces secundarios.
+- **Caption** (600, 0.8rem): nombre de la línea de producto sobre tarjetas y carrusel.
 - **Label** (700, 0.875rem, mayúsculas, tracking 0.05em): sólo encabezados de columna en sidebar y footer.
 
 ### Named Rules
