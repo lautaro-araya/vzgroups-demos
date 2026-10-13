@@ -169,3 +169,18 @@
     animation: none;
   }
 }
+
+/* ── Carrusel del hero: la barra activa se llena con el tiempo ─────── */
+@keyframes vz-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.vz-progress {
+  animation-name: vz-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}

@@ -297,7 +297,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-vz-line bg-white/95 backdrop-blur-sm">
-      <div className="flex h-[4.5rem] items-center gap-8 px-5 lg:px-8">
+      <div className="flex h-[4.5rem] items-center gap-8 px-6 sm:px-10 lg:px-14">
         <Link to="/" className="shrink-0" aria-label="VZ Groups, inicio">
           <img src={A + 'brand/logo.png'} alt="VZ Groups" width={640} height={272} className="h-12 w-auto sm:h-14" />
         </Link>

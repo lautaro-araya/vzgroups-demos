@@ -1,6 +1,6 @@
 /**
- * Portada. El holding va primero (banda azul con las tres unidades); el
- * catálogo entra en la misma primera pantalla con sus líneas de producto.
+ * Portada. El holding va primero (banda azul con las tres unidades y un
+ * carrusel de productos); el catálogo asoma en la misma primera pantalla.
  * `HomeBody` es presentación pura: la usan el cliente y el prerender.
  */
 import { Link } from 'react-router-dom'
@@ -12,6 +12,7 @@ import { useSiteContent } from '../lib/site-content'
 import { UNITS } from '../site/units'
 import { ServiceIcon } from '../site/service-icons'
 import { ProductCard } from '../site/ProductCard'
+import { HeroCarousel } from '../site/HeroCarousel'
 import {
   SiteShell,
   ArrowGlyph,
@@ -22,19 +23,21 @@ import {
   btnPrimary,
 } from '../site/chrome'
 
-function Hero() {
+function Hero({ products }: { products: Product[] }) {
+  // Destacados primero; luego el resto, hasta 6 diapositivas.
+  const slides = [...products.filter((p) => p.featured), ...products.filter((p) => !p.featured)].slice(0, 6)
   return (
     <section className="on-blue relative bg-vz-blue text-white">
-      <div className="mx-auto grid max-w-site grid-cols-1 gap-10 px-5 pb-28 pt-12 sm:pt-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-16 lg:pb-32 lg:pt-20">
+      <div className="mx-auto grid max-w-site grid-cols-1 gap-12 px-5 pb-28 pt-12 sm:pt-16 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-center lg:gap-14 lg:pb-32 lg:pt-16">
         <div>
-          <h1 className="text-[clamp(2.3rem,5.4vw,4.1rem)] font-extrabold leading-[1.02] tracking-[-0.025em]" style={{ fontStretch: '115%' }}>
+          <h1 className="text-[clamp(2.3rem,5vw,3.9rem)] font-extrabold leading-[1.02] tracking-[-0.025em]" style={{ fontStretch: '115%' }}>
             Control de plagas, higiene y capacitación. Y los equipos para hacerlo bien.
           </h1>
           <p className="mt-6 max-w-[34rem] text-lg leading-relaxed text-[#dbe4f5]">
             VZ Groups reúne a Vetlain, Vetclean y VZModular. Desde Talagante atendemos a empresas e instituciones, y
             vendemos los mismos equipos profesionales que usamos en terreno.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link to="/productos" className="inline-flex items-center gap-2 bg-white px-6 py-3.5 text-base font-semibold text-vz-blue-deep transition-colors hover:bg-vz-blue-tint">
               Ver catálogo de productos <ArrowGlyph className="h-5 w-5" />
             </Link>
@@ -42,44 +45,43 @@ function Hero() {
               Solicitar cotización
             </Link>
           </div>
+
+          {/* Empresas del grupo: fila compacta bajo las acciones. */}
+          <div className="mt-10">
+            <h2 className="font-display text-sm font-bold uppercase tracking-wider text-[#b9c8e6]">Empresas del grupo</h2>
+            <ul className="mt-3 grid grid-cols-1 border-t border-white/25 sm:grid-cols-3 sm:border-t-0">
+              {UNITS.map((u) => {
+                const body = (
+                  <>
+                    <span className="flex items-center gap-2">
+                      <span className="font-display text-xl font-bold" style={{ fontStretch: '112%' }}>{u.name}</span>
+                      {u.href && <ExternalGlyph className="h-4 w-4 text-white/80" />}
+                    </span>
+                    <span className="mt-0.5 block text-[0.95rem] text-[#c9d6ee]">{u.area}</span>
+                    {u.status && (
+                      <span className="mt-2 inline-block border border-white/40 px-2 py-0.5 text-xs font-semibold text-[#dbe4f5]">{u.status}</span>
+                    )}
+                  </>
+                )
+                const cls = 'block h-full border-b border-white/25 py-3 sm:border-b-0 sm:border-t sm:pr-4'
+                return (
+                  <li key={u.id}>
+                    {u.href ? (
+                      <a href={u.href} target="_blank" rel="noopener noreferrer" className={`${cls} transition-colors hover:text-white hover:[&_span]:text-white`}>
+                        {body}
+                        <span className="sr-only">(sitio externo, se abre en otra pestaña)</span>
+                      </a>
+                    ) : (
+                      <div className={cls}>{body}</div>
+                    )}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
         </div>
 
-        <div className="self-end">
-          <h2 className="font-display text-sm font-bold uppercase tracking-wider text-[#b9c8e6]">Empresas del grupo</h2>
-          <ul className="mt-3 border-t border-white/25">
-            {UNITS.map((u) => {
-              const body = (
-                <>
-                  <div className="min-w-0">
-                    <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                      <span className="font-display text-2xl font-bold" style={{ fontStretch: '112%' }}>{u.name}</span>
-                      <span className="text-[0.95rem] text-[#c9d6ee]">{u.area}</span>
-                    </p>
-                    <p className="mt-1 text-[0.95rem] leading-snug text-[#dbe4f5]">{u.text}</p>
-                  </div>
-                  {u.href ? (
-                    <ExternalGlyph className="h-5 w-5 shrink-0 text-white/80 transition-transform group-hover:translate-x-0.5" />
-                  ) : u.status ? (
-                    <span className="shrink-0 border border-white/40 px-2 py-0.5 text-xs font-semibold text-[#dbe4f5]">{u.status}</span>
-                  ) : null}
-                </>
-              )
-              return (
-                <li key={u.id} className="border-b border-white/25">
-                  {u.href ? (
-                    <a href={u.href} target="_blank" rel="noopener noreferrer"
-                      className="group -mx-3 flex items-start justify-between gap-4 px-3 py-4 transition-colors hover:bg-white/10">
-                      {body}
-                      <span className="sr-only">(sitio externo, se abre en otra pestaña)</span>
-                    </a>
-                  ) : (
-                    <div className="flex items-start justify-between gap-4 py-4">{body}</div>
-                  )}
-                </li>
-              )
-            })}
-          </ul>
-        </div>
+        <HeroCarousel products={slides} />
       </div>
     </section>
   )
@@ -273,7 +275,7 @@ export function HomeBody({ products }: { products: Product[] }) {
         description="Holding de Talagante con Vetlain, Vetclean y VZModular. Catálogo de equipos profesionales para control de roedores, insectos y aves: arma tu lista y cotiza."
         path="/"
       />
-      <Hero />
+      <Hero products={products} />
       <Lines products={products} />
       <ByPest />
       <Featured products={products} />
