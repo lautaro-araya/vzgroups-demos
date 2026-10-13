@@ -46,6 +46,11 @@ typography:
     fontSize: "0.95rem"
     fontWeight: 400
     lineHeight: 1.35
+  prose-heading:
+    fontFamily: "Archivo, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.45rem"
+    fontWeight: 700
+    lineHeight: 1.15
   caption:
     fontFamily: "'Source Sans 3', ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.8rem"
@@ -149,6 +154,7 @@ Restringido: neutros fríos más un azul que manda y un verde con un solo trabaj
 - **Title** (700, 1.125rem): nombres de producto, unidades, pasos.
 - **Body** (400, 1.0625rem, 1.6): texto corrido; fichas técnicas a 68ch máximo.
 - **Body small** (400, 0.95rem, 1.35): resúmenes en tarjetas, metadatos, botones y enlaces secundarios.
+- **Prose heading** (700, 1.45rem, 1.15): subtítulos `##` dentro de la ficha técnica (Markdown del panel).
 - **Caption** (600, 0.8rem): nombre de la línea de producto sobre tarjetas y carrusel.
 - **Label** (700, 0.875rem, mayúsculas, tracking 0.05em): sólo encabezados de columna en sidebar y footer.
 
